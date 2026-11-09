@@ -183,5 +183,6 @@
     "surface": "#17171D",
     "highlight": "#FFE2B0"
   },
-  "browser": "pages"
+  "browser": "pages",
+  "discoverable": false
 }
