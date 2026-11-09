@@ -1,0 +1,187 @@
+{
+  "id": "movies",
+  "name": "Movies",
+  "version": "1.2.0",
+  "apiVersion": 9,
+  "entry": "plugin.js",
+  "icon": "icon.png",
+  "description": "Películas y series del catálogo de TMDB, con video desde los servidores de PrimeSrc (Voe, Filemoon, Streamtape y más).",
+  "author": "xuper-plugin",
+  "categories": [
+    "movies",
+    "series"
+  ],
+  "capabilities": [
+    "home",
+    "browse",
+    "search",
+    "episodes",
+    "resolve"
+  ],
+  "hosts": [
+    "api.themoviedb.org",
+    "image.tmdb.org",
+    "primesrc.me"
+  ],
+  "fetchHosts": "any",
+  "streamHosts": "any",
+  "section": {
+    "label": "Movies",
+    "labelEn": "Movies"
+  },
+  "settings": [
+    {
+      "key": "srcSection",
+      "type": "section",
+      "label": "Video",
+      "labelEn": "Video"
+    },
+    {
+      "key": "audio",
+      "type": "select",
+      "label": "Audio preferido",
+      "labelEn": "Preferred audio",
+      "default": "any",
+      "options": [
+        {
+          "value": "any",
+          "label": "Cualquiera",
+          "labelEn": "Any"
+        },
+        {
+          "value": "en",
+          "label": "Inglés (original)",
+          "labelEn": "English (original)"
+        },
+        {
+          "value": "es",
+          "label": "Español",
+          "labelEn": "Spanish"
+        }
+      ],
+      "hint": "Solo muestra servidores con ese audio.",
+      "hintEn": "Only shows servers with that audio."
+    },
+    {
+      "key": "homeSection",
+      "type": "section",
+      "label": "Inicio",
+      "labelEn": "Home"
+    },
+    {
+      "key": "homeRows",
+      "type": "select",
+      "label": "Filas en Inicio",
+      "labelEn": "Rows on Home",
+      "default": "6",
+      "options": [
+        {
+          "value": "2",
+          "label": "2 filas",
+          "labelEn": "2 rows"
+        },
+        {
+          "value": "4",
+          "label": "4 filas",
+          "labelEn": "4 rows"
+        },
+        {
+          "value": "6",
+          "label": "6 filas",
+          "labelEn": "6 rows"
+        },
+        {
+          "value": "9",
+          "label": "9 filas",
+          "labelEn": "9 rows"
+        }
+      ],
+      "hint": "Menos filas cargan más rápido.",
+      "hintEn": "Fewer rows load faster."
+    },
+    {
+      "key": "region",
+      "label": "País (estrenos y populares)",
+      "labelEn": "Country (releases and popular)",
+      "type": "select",
+      "default": "US",
+      "options": [
+        {
+          "value": "US",
+          "label": "Estados Unidos",
+          "labelEn": "United States"
+        },
+        {
+          "value": "MX",
+          "label": "México",
+          "labelEn": "Mexico"
+        },
+        {
+          "value": "CO",
+          "label": "Colombia",
+          "labelEn": "Colombia"
+        },
+        {
+          "value": "AR",
+          "label": "Argentina",
+          "labelEn": "Argentina"
+        },
+        {
+          "value": "ES",
+          "label": "España",
+          "labelEn": "Spain"
+        },
+        {
+          "value": "GB",
+          "label": "Reino Unido",
+          "labelEn": "United Kingdom"
+        },
+        {
+          "value": "BR",
+          "label": "Brasil",
+          "labelEn": "Brazil"
+        }
+      ]
+    },
+    {
+      "key": "toolsSection",
+      "type": "section",
+      "label": "Estado",
+      "labelEn": "Status",
+      "hint": "Verifica la conexión con los servidores de video.",
+      "hintEn": "Check the connection to video servers."
+    },
+    {
+      "key": "serverStatus",
+      "type": "status",
+      "label": "Servidores",
+      "labelEn": "Servers"
+    },
+    {
+      "key": "checkServers",
+      "type": "action",
+      "label": "Probar servidores ahora",
+      "labelEn": "Test servers now"
+    },
+    {
+      "key": "clearCache",
+      "type": "action",
+      "label": "Limpiar caché",
+      "labelEn": "Clear cache",
+      "confirm": "¿Limpiar la caché de Movies?",
+      "confirmEn": "Clear Movies cache?"
+    }
+  ],
+  "homepage": "https://github.com/xuper-plugin/kino-plugin-movies",
+  "secrets": {
+    "TMDB_KEY": "kino-sealed:v1:0Ei3yaYRoXK0pl3uDapXnx6DwnH1iWpX1nSP6oSt1CWWjHWFIgywDKna80-S5pIMRNVXNJw9iAqWMrRB0S5SSM_1gLViLvtoScdSITZ1LnTZe-8xLooCdtaes3M"
+  },
+  "theme": {
+    "accent": "#F5A524",
+    "onAccent": "#1A1205",
+    "background": "#0B0B0F",
+    "surface": "#17171D",
+    "highlight": "#FFE2B0"
+  },
+  "browser": "pages"
+}
